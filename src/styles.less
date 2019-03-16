@@ -1,0 +1,32 @@
+@import './theme.less';
+html {
+  font-size: @base-font-size;
+}
+
+@media screen and (max-width:320px) {
+  html {
+    font-size: 0.85 * @base-font-size;
+  }
+}
+
+@media screen and (min-width:540px) {
+  html {
+    font-size: 1.44 * @base-font-size;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  html body {
+    width: 768px;
+    margin: 0 auto
+  }
+  .am-tab-bar {
+    // antd tab-bar宽度处理
+    max-width: 768px;
+  }
+}
+
+body {
+  font-size: .8rem;
+  font-family: -apple-system, Helvetica, sans-serif;
+}

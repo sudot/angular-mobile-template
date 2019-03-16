@@ -1,0 +1,34 @@
+<div class="user-wrapper flex">
+  <img class="user-avatar" [src]="user.head || '/assets/images/customer/head.svg'" />
+  <div class="user-info">
+    <div class="user-nickname">{{user.nickname}}</div>
+    <span class="user-level">{{user.gameMaster ? '管理员' : 'Lv.' + user.rank.name}}</span>
+  </div>
+  <div class="user-sign">签到</div>
+</div>
+<div class="capital-wrapper flex">
+  <div class="capital-item flex">
+    <span>金豆</span>
+    {{user.balance}}
+  </div>
+  <div class="capital-item vertical-line"></div>
+  <div class="capital-item flex">
+    <span>积分</span>
+    {{user.point}}
+  </div>
+</div>
+<WhiteSpace></WhiteSpace>
+<List>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/recharge.svg" routerLink="/recharge">充值金豆</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/signin.svg" routerLink="/signin">每日签到</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/clock.svg" routerLink="/chat-room">游戏记录</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/rank.svg" routerLink="/rank">排行榜</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/qrcode.svg" routerLink="/qrcode">二维码</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/invite.svg" routerLink="/invite">邀请好友</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/help.svg" routerLink="/help">常见问题</ListItem>
+  <ListItem arrow="horizontal" thumb="/assets/images/customer/support.svg" routerLink="/support">联系客服</ListItem>
+</List>
+<WhiteSpace></WhiteSpace>
+<List className="logout">
+  <ListItem (onClick)="logout()">退出登录</ListItem>
+</List>

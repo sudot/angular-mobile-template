@@ -1,0 +1,14 @@
+<div class="login-cont">
+  <div class="login-nav">
+    <h1>登录</h1>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+    <input type="text" required formControlName="username" placeholder="请输入手机号码" autofocus />
+    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+      <div *ngIf="username.errors.required">请输入手机号码</div>
+    </div>
+    <input type="password" required formControlName="password" placeholder="请输入登录密码" />
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">请输入登录密码</div>
+    <button Button type="primary" [loading]="isLoading" [disabled]="isLoading">登录</button>
+  </form>
+</div>

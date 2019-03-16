@@ -1,0 +1,19 @@
+<div [@routeAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+<footer class="tabbar">
+  <div class="tabbar-content-wrap">
+    <div class="tab-item" routerLink="/">
+      <i class="tab-item-icon iconfont icon-home"></i>
+      <div class="tab-item-label">游戏大厅</div>
+    </div>
+    <div class="tab-item" routerLink="/chat-room">
+      <i class="tab-item-icon iconfont icon-chat"></i>
+      <div class="tab-item-label">聊天室</div>
+    </div>
+    <div class="tab-item" routerLink="/user">
+      <i class="tab-item-icon iconfont icon-center"></i>
+      <div class="tab-item-label">个人中心</div>
+    </div>
+  </div>
+</footer>
