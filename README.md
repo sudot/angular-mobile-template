@@ -55,11 +55,13 @@ ng serve --open
 ├──src               -- 源码目录
 │   ├──app           -- 项目代码
 │   │  ├──component  -- 项目组件（每一个视图作为一个组件）目录
+│   │  ├──guard      -- 路由守卫
 │   │  ├──model      -- 数据模型
 │   │  ├──service    -- 项目服务
 │   │  └──utils      -- 工具包
 │   ├──assets        -- 静态资源
-│   └──environments  -- 项目运行环境
+│   ├──environments  -- 项目运行环境
+│   └──mock          -- 模拟数据
 ├──angular.json      -- angular-cli配置
 ├──package.json      -- npm依赖包配置文件
 ├──tsconfig.json     -- TypeScript编译器文件
